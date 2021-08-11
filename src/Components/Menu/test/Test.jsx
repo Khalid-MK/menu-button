@@ -19,7 +19,7 @@ const Test = ({ showMenu }) => {
 
   const liClasses = useMemo(() => {
     return showMenu
-      ? "main-nav-li menu-item transaction0"
+      ? "main-nav-li menu-item transaction0 "
       : "main-nav-li menu-item transaction100";
   }, [showMenu]);
 
