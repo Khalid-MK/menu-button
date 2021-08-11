@@ -1,23 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import './Styles/normlize.css'
+import './Styles/queries.css'
+import './Styles/animations.css'
+import MenuButton from './Components/Menu/MenuButton/MenuButton';
+import { useCallback, useState, useMemo } from 'react';
+import MenuContainer from './Components/Menu/MenuContainer/MenuContainer';
+import Test from './Components/Menu/test/Test';
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false)
+  const toggleMenu = useCallback(
+    (show) => {
+      setShowMenu(show)
+    },
+    [],
+  )
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div>
+        <div className="main-top-menu">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-1 col-xs-3">
+                <MenuButton toggleMenu={toggleMenu} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="menu-container">
+          {/* <MenuContainer /> */}
+          <Test showMenu={showMenu} ></Test>
+        </div>
+
+        <div className="home" />
+      </div>
     </div>
   );
 }

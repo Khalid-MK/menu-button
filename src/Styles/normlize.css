@@ -1,0 +1,70 @@
+:root {
+  --background-color: rgb(153, 155, 229);
+  --main-color: #ff7200;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  /* height: 100vh; */
+  text-rendering: optimizeLegibility;
+  background-color: var(--background-color);
+  font-family: "Cairo" !important;
+}
+
+a:hover,
+a:visited,
+a:active,
+a:link {
+  color: #4c70b3 !important;
+  text-decoration: none !important;
+}
+
+a {
+  background-color: transparent;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.zIndex0 {
+  z-index: 0 !important;
+}
+
+.zIndex1 {
+  z-index: 1 !important;
+}
+
+.zIndex9999 {
+  z-index: 9999 !important;
+}
+
+.zIndex99999 {
+  z-index: 99999 !important;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  height: 10px !important;
+}

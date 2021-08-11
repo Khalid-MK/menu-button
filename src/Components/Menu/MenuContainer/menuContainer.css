@@ -1,0 +1,77 @@
+.menu-container {
+  height: 100vh;
+  width: 100% !important;
+  background-color: beige;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.menu-container .row {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.menu-container .col {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.box {
+  height: 100vh !important;
+  background: url(./a.png);
+  position: relative;
+  animation-name: bounceInDown;
+  animation-duration: 2s;
+}
+
+.box:not(.box:last-of-type)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-right: 2px solid white;
+  animation-name: bounceInDownBorder;
+  animation-duration: 4s;
+}
+
+.box.element1 {
+  animation-delay: 0.1s;
+}
+.box.element2 {
+  animation-delay: 0.3s;
+}
+.box.element3 {
+  animation-delay: 0.5s;
+}
+.box.element4 {
+  animation-delay: 0.7s;
+}
+.box.element5 {
+  animation-delay: 0.9s;
+}
+.box.element6 {
+  animation-delay: 1.1s;
+}
+
+@keyframes bounceInDown {
+  0% {
+    background: var(--main-color);
+    bottom: 120%;
+  }
+  100% {
+    background: black;
+    bottom: 0%;
+  }
+}
+
+@keyframes bounceInDownBorder {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
